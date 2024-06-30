@@ -34,18 +34,16 @@ const Navbar = () => {
           Issue Tracker
         </h1>
       </div>
-      <div className="flex justify-center items-center gap-10">
+      {/* <div className="flex justify-center items-center gap-10">
         <Link href="/" className="font-semibold text-xl">
           Dashboard
         </Link>
         <Link href="/issues" className=" font-semibold text-xl">
           Issues
         </Link>
-      </div>
-      <Link href="/signup">
-        <button className="p-2 sm:p-3 rounded-md  bg-white text-black font-semibold">
-          SignUp
-        </button>
+      </div> */}
+      <Link href="/issues" className=" font-semibold text-xl">
+        Issues
       </Link>
     </div>
   );

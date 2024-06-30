@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useForm, Controller } from "react-hook-form";
 import SimpleMDE from "react-simplemde-editor";
@@ -34,7 +33,13 @@ const NewIssuePage = () => {
     >
       <Input
         type="text"
-        className="max-w-lg"
+        className="max-w-sm sm:max-w-lg"
+        placeholder="Name"
+        {...register("name")}
+      />
+      <Input
+        type="text"
+        className="max-w-sm sm:max-w-lg"
         placeholder="Title"
         {...register("title")}
       />
@@ -45,7 +50,6 @@ const NewIssuePage = () => {
           <SimpleMDE placeholder="Description" {...field} />
         )}
       />
-
       <Button className="mt-5 p-4">Submit issue</Button>
     </form>
   );
